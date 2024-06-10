@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Great Vibes', cursive; /* Romantic font */
+    background-color: #001f3f; /* Dark navy blue */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.content {
+    display: inline-block;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 4px; /* Adjust letter spacing */
+}
+
+.heart {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: pulse 1s infinite;
+    margin: 0 16px; /* Adjust margin */
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -12px;
+    left: 0;
+}
+
+.heart::after {
+    left: 12px;
+    top: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+        filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+    }
+    100% {
+        transform: scale(1) rotate(-45deg);
+        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.6));
+    }
+}
+
+.emoji {
+    font-size: 3rem;
+    margin-top: 10px; /* Adjust margin */
+}
